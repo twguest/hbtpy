@@ -17,6 +17,6 @@ install:
 script:
   - coverage run -m pytest  # Run the tests and check for test coverage.
   - coverage report -m  # Generate test coverage report.
-  - codecov  
+  - codecov
   - flake8 --exit-zero # Upload the report to codecov.
-  - make -C docs html  # Build the documentation.
+  
