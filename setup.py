@@ -40,7 +40,7 @@ with open(path.join(here, "requirements.txt")) as requirements_file:
 
 setup(
     name="hbtpy",
-    version=versioneer.get_version(),
+    version="vX.Y.Z",
     cmdclass=versioneer.get_cmdclass(),
     description="A python package for calculating first-order field-field correlations from second-order intensity-intensity correlations.",
     long_description=readme,
