@@ -17,5 +17,14 @@ A python package for calculating first-order field-field correlations from secon
 
 Features
 --------
+* Calculate the second-order time or intensity correlations of a dataset
+* Calculate the first-order field-field correlations of a dataset
+* Calculate the corresponding coherence length, degree of coherence and contrast
+
 
 * TODO
+
+Scientific Background
+--------
+Here are some citations to get you started 
+{\field{\*\fldinst HYPERLINK "https://hal.science/hal-02474546v1/document"}{\fldrslt A great introduction to the theory}}
