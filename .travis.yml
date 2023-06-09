@@ -7,7 +7,11 @@ cache:
   directories:
     - $HOME/.cache/pip
     - $HOME/.ccache  # https://github.com/travis-ci/travis-ci/issues/5853
-
+env:
+  global:
+    # Doctr deploy key for YOUR_GITHUB_USERNAME/YOUR_REPO_NAME
+    - secure: "sY2q2R8RodTaKTL3llaC3Jkvaqhu0rUrTiUPWOcyepBgDV5hjoNB9KZ3CoQ2XKPtOAWTyalNc45hUoStM+w0833Qi/8VVR0dBN0l/uYYFVwaqE8AZ/Y+MTjtn4DoLtvARAsx8cYnEQtF9pcaWJsRq3vwRb2KNdUmv008McECi7nFVqnr6jM4P94PYuqLpeC2N3UORpOK3fsqDtSyPi7U7w0991SYaEJPIVQtCKBMi66nNfCZ10HncQbX6XH4BmR7C8iFdYtPnD179ErfursSOK4ZKsclOK11IRhEWoxEDVn20sNnyQ6g/6S1JK2mABF5k4CY0UNvH3pheJiARESoGfjdK4WUokvd9OEnKo7FS8WZ7Q4s0ikPw8HlOIDOMHgkkg152SOzulrAxVUXz03KSZW8VsEc4dWGCOukIJyb7hhcDAaPN5pI9L6NOanY+PBdXeYTUBu+TRHtgnbdXXgz97Qx2n9ZMLgMRW5MAG4Su5U5JrqjMyT0uFCJOQw5JyGMTLNo0vvwxf3SbeUihL5GIK190YBjlIu6OiCCOXuPQO5NuCyg9Wtpvb9vTXF2/8lFnXKsn5bxppVBYi+40ydkBH/f9qn8MfmEQaKPmFLudbiaTCla/LGsN+HSHyTRQNgFDONLFVRCVzy8Dwb0MSrSXv2HhgASDnaaAedwl3Tbzfs="
+    
 install:
   # Install this package and the packages listed in requirements.txt.
   - pip install .
@@ -18,3 +22,7 @@ script:
   - coverage run -m pytest  # Run the tests and check for test coverage.
   - coverage report -m  # Generate test coverage report.
   - codecov
+  - set -e  # If any of the following steps fail, just stop at that point.
+  - make -C docs html  # Build the documentation.
+  - pip install doctr
+  - doctr deploy --built-docs docs/build/html .  # Publish the documentation.
