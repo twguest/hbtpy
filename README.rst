@@ -24,7 +24,7 @@ Features
 * Calculate the corresponding coherence length, degree of coherence and contrast
 
 
-* TODO
+* Still Packaging
 
 Scientific Background
 --------
