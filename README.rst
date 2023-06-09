@@ -26,5 +26,5 @@ Features
 
 Scientific Background
 --------
-Here are some citations to get you started 
+Here are some citations to get you started
 {\field{\*\fldinst HYPERLINK "https://hal.science/hal-02474546v1/document"}{\fldrslt A great introduction to the theory}}
