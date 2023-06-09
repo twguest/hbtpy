@@ -29,4 +29,4 @@ Features
 Scientific Background
 --------
 Here are some citations to get you started
-* "https://hal.science/hal-02474546v1/document"}
+* "https://hal.science/hal-02474546v1/document"
