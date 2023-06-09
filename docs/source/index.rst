@@ -13,3 +13,8 @@ HBTpy Documentation
    usage
    release-history
    min_versions
+
+.. autosummary::
+   :toctree: generated/
+
+   hbtpy.soicc.calculate_g2
